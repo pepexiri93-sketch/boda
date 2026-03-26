@@ -1,0 +1,870 @@
+<!DOCTYPE html>
+<!-- saved from url=(0055)file:///C:/Users/User/Downloads/index.html#cuenta-atras -->
+<html lang="es"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jose &amp; Cristina · 13.03.2027</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com/">
+  <link href="./Jose &amp; Cristina · 13.03.2027_files/css2" rel="stylesheet">
+  <style>
+    :root {
+      --blue-deep: #1a3a5c;
+      --blue-mid: #2c6fad;
+      --blue-light: #5b9bd5;
+      --blue-pale: #d6e9f8;
+      --white: #fafcff;
+      --cream: #f5f0e8;
+      --gold: #c9a84c;
+      --gold-light: #e8d5a0;
+      --text-dark: #1a2535;
+      --text-mid: #3d5a7a;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Cormorant Garamond', serif;
+      background: var(--white);
+      color: var(--text-dark);
+      overflow-x: hidden;
+    }
+
+    /* ─── HERO ─── */
+    .hero {
+      min-height: 100vh;
+      background:
+        radial-gradient(ellipse at 20% 80%, rgba(44,111,173,0.15) 0%, transparent 60%),
+        radial-gradient(ellipse at 80% 20%, rgba(91,155,213,0.12) 0%, transparent 50%),
+        linear-gradient(165deg, #e8f3fc 0%, #f5f0e8 40%, #eaf2fb 100%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image:
+        repeating-linear-gradient(0deg, transparent, transparent 59px, rgba(44,111,173,0.06) 60px),
+        repeating-linear-gradient(90deg, transparent, transparent 59px, rgba(44,111,173,0.06) 60px);
+      pointer-events: none;
+    }
+
+    /* Greek wave ornament top */
+    .hero::after {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      height: 80px;
+      background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 80'%3E%3Cpath d='M0,40 C150,80 300,0 450,40 C600,80 750,0 900,40 C1050,80 1150,20 1200,40 L1200,80 L0,80 Z' fill='%23fafcff'/%3E%3C/svg%3E") center bottom / cover no-repeat;
+    }
+
+    .column-left, .column-right {
+      position: absolute;
+      top: 0; bottom: 80px;
+      width: 60px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0;
+      opacity: 0.12;
+      pointer-events: none;
+    }
+    .column-left { left: 40px; }
+    .column-right { right: 40px; }
+    .col-segment {
+      width: 24px;
+      flex: 1;
+      background: repeating-linear-gradient(
+        0deg,
+        var(--blue-mid),
+        var(--blue-mid) 2px,
+        transparent 2px,
+        transparent 12px
+      );
+      border-left: 2px solid var(--blue-mid);
+      border-right: 2px solid var(--blue-mid);
+    }
+    .col-cap {
+      width: 50px;
+      height: 16px;
+      background: var(--blue-mid);
+      border-radius: 2px 2px 0 0;
+    }
+    .col-base {
+      width: 50px;
+      height: 16px;
+      background: var(--blue-mid);
+      border-radius: 0 0 2px 2px;
+    }
+
+    .hero-content {
+      text-align: center;
+      z-index: 2;
+      padding: 2rem;
+      animation: fadeUp 1.2s ease both;
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(40px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .hero-eyebrow {
+      font-family: 'Cinzel', serif;
+      font-size: 0.7rem;
+      letter-spacing: 0.35em;
+      color: var(--blue-mid);
+      text-transform: uppercase;
+      margin-bottom: 1.5rem;
+      animation: fadeUp 1.2s 0.2s ease both;
+    }
+
+    .hero-names {
+      font-family: 'Cinzel', serif;
+      font-size: clamp(3.5rem, 9vw, 7rem);
+      font-weight: 600;
+      color: var(--blue-deep);
+      line-height: 0.95;
+      letter-spacing: -0.01em;
+      animation: fadeUp 1.2s 0.3s ease both;
+    }
+
+    .hero-names span {
+      display: block;
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      font-weight: 400;
+      color: var(--gold);
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      letter-spacing: 0.15em;
+      margin: 0.3rem 0;
+    }
+
+    .greek-divider {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      justify-content: center;
+      margin: 2rem 0;
+      animation: fadeUp 1.2s 0.5s ease both;
+    }
+    .greek-divider::before,
+    .greek-divider::after {
+      content: '';
+      height: 1px;
+      width: 80px;
+      background: linear-gradient(90deg, transparent, var(--gold));
+    }
+    .greek-divider::after {
+      background: linear-gradient(90deg, var(--gold), transparent);
+    }
+    .meander {
+      color: var(--gold);
+      font-size: 1.4rem;
+      letter-spacing: 0.1em;
+    }
+
+    .hero-date {
+      font-family: 'Cinzel', serif;
+      font-size: clamp(1rem, 2.5vw, 1.4rem);
+      color: var(--blue-deep);
+      letter-spacing: 0.2em;
+      animation: fadeUp 1.2s 0.6s ease both;
+    }
+
+    .hero-location {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: clamp(1.1rem, 2vw, 1.4rem);
+      color: var(--text-mid);
+      margin-top: 0.5rem;
+      animation: fadeUp 1.2s 0.7s ease both;
+    }
+
+    .hero-scroll {
+      margin-top: 3rem;
+      animation: fadeUp 1.2s 1s ease both;
+    }
+    .scroll-btn {
+      display: inline-block;
+      padding: 0.8rem 2.5rem;
+      border: 1.5px solid var(--blue-mid);
+      color: var(--blue-mid);
+      text-decoration: none;
+      font-family: 'Cinzel', serif;
+      font-size: 0.7rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      transition: all 0.3s;
+      background: transparent;
+    }
+    .scroll-btn:hover {
+      background: var(--blue-mid);
+      color: var(--white);
+    }
+
+    /* ─── NAV ─── */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(250,252,255,0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(44,111,173,0.15);
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: center;
+      gap: 2.5rem;
+    }
+    nav a {
+      font-family: 'Cinzel', serif;
+      font-size: 0.65rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--text-mid);
+      text-decoration: none;
+      transition: color 0.2s;
+      padding: 0.2rem 0;
+      border-bottom: 1.5px solid transparent;
+    }
+    nav a:hover {
+      color: var(--blue-deep);
+      border-bottom-color: var(--gold);
+    }
+
+    /* ─── COUNTDOWN ─── */
+    .countdown-section {
+      background: linear-gradient(135deg, var(--blue-deep) 0%, #0f2540 100%);
+      padding: 5rem 2rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .countdown-section::before {
+      content: '◈';
+      position: absolute;
+      font-size: 30rem;
+      color: rgba(255,255,255,0.02);
+      top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+    }
+    .section-label {
+      font-family: 'Cinzel', serif;
+      font-size: 0.65rem;
+      letter-spacing: 0.4em;
+      text-transform: uppercase;
+      color: var(--gold-light);
+      margin-bottom: 1rem;
+      opacity: 0.8;
+    }
+    .countdown-section .section-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      color: var(--white);
+      margin-bottom: 3rem;
+    }
+    .countdown-grid {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+    .countdown-item {
+      text-align: center;
+      min-width: 100px;
+    }
+    .countdown-number {
+      font-family: 'Cinzel', serif;
+      font-size: clamp(3rem, 7vw, 5rem);
+      font-weight: 600;
+      color: var(--white);
+      line-height: 1;
+      display: block;
+    }
+    .countdown-label {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 0.9rem;
+      letter-spacing: 0.2em;
+      color: var(--gold-light);
+      text-transform: uppercase;
+      margin-top: 0.5rem;
+    }
+    .countdown-sep {
+      font-size: 3rem;
+      color: var(--gold);
+      line-height: 1;
+      align-self: flex-start;
+      padding-top: 0.3rem;
+      opacity: 0.5;
+    }
+
+    /* ─── SECTIONS ─── */
+    section {
+      padding: 6rem 2rem;
+    }
+    .section-inner {
+      max-width: 860px;
+      margin: 0 auto;
+    }
+    .section-header {
+      text-align: center;
+      margin-bottom: 3.5rem;
+    }
+    .section-title {
+      font-family: 'Cinzel', serif;
+      font-size: clamp(1.6rem, 3.5vw, 2.5rem);
+      color: var(--blue-deep);
+      margin-top: 0.5rem;
+    }
+
+    /* ─── NUESTRA HISTORIA ─── */
+    .story-section {
+      background: var(--white);
+    }
+    .story-text {
+      font-size: 1.25rem;
+      line-height: 1.9;
+      color: var(--text-mid);
+      text-align: center;
+      font-style: italic;
+      max-width: 650px;
+      margin: 0 auto;
+    }
+
+    /* ─── DETALLES DEL DÍA ─── */
+    .details-section {
+      background: linear-gradient(180deg, #eef5fb 0%, var(--white) 100%);
+    }
+    .details-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 2rem;
+    }
+    .detail-card {
+      background: var(--white);
+      border: 1px solid rgba(44,111,173,0.15);
+      border-top: 3px solid var(--gold);
+      padding: 2.5rem 2rem;
+      text-align: center;
+      transition: box-shadow 0.3s, transform 0.3s;
+    }
+    .detail-card:hover {
+      box-shadow: 0 12px 40px rgba(44,111,173,0.12);
+      transform: translateY(-4px);
+    }
+    .detail-icon {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      display: block;
+    }
+    .detail-card h3 {
+      font-family: 'Cinzel', serif;
+      font-size: 0.75rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--blue-mid);
+      margin-bottom: 0.8rem;
+    }
+    .detail-card p {
+      font-size: 1.1rem;
+      color: var(--text-mid);
+      line-height: 1.6;
+    }
+    .detail-card strong {
+      display: block;
+      font-size: 1.3rem;
+      color: var(--blue-deep);
+      font-weight: 600;
+      margin-bottom: 0.3rem;
+    }
+
+    /* ─── MAPA ─── */
+    .map-section {
+      background: var(--white);
+    }
+    .map-wrapper {
+      border: 2px solid rgba(44,111,173,0.2);
+      overflow: hidden;
+      margin-top: 2rem;
+    }
+    .map-wrapper iframe {
+      width: 100%;
+      height: 420px;
+      border: none;
+      display: block;
+    }
+    .map-info {
+      background: var(--blue-deep);
+      padding: 1.5rem 2rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+    .map-info p {
+      color: var(--blue-pale);
+      font-size: 1rem;
+      flex: 1;
+    }
+    .map-info a {
+      font-family: 'Cinzel', serif;
+      font-size: 0.65rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gold-light);
+      text-decoration: none;
+      border: 1px solid var(--gold);
+      padding: 0.6rem 1.4rem;
+      white-space: nowrap;
+      transition: all 0.2s;
+    }
+    .map-info a:hover {
+      background: var(--gold);
+      color: var(--blue-deep);
+    }
+
+    /* ─── DRESSCODE ─── */
+    .dresscode-section {
+      background: linear-gradient(135deg, #eef5fb 0%, #f5f0e8 100%);
+    }
+    .dresscode-content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: center;
+    }
+    @media (max-width: 640px) {
+      .dresscode-content { grid-template-columns: 1fr; }
+    }
+    .color-palette {
+      display: flex;
+      gap: 1rem;
+      margin: 1.5rem 0;
+    }
+    .swatch {
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      border: 2px solid rgba(255,255,255,0.8);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+    .dresscode-text h3 {
+      font-family: 'Cinzel', serif;
+      font-size: 1.1rem;
+      color: var(--blue-deep);
+      margin-bottom: 1rem;
+    }
+    .dresscode-text p {
+      font-size: 1.1rem;
+      color: var(--text-mid);
+      line-height: 1.7;
+    }
+    .dresscode-visual {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1.5rem;
+    }
+    .greek-pattern {
+      width: 100%;
+      height: 8px;
+      background: repeating-linear-gradient(
+        90deg,
+        var(--blue-mid) 0px, var(--blue-mid) 10px,
+        transparent 10px, transparent 14px,
+        var(--blue-mid) 14px, var(--blue-mid) 18px,
+        transparent 18px, transparent 22px,
+        var(--gold) 22px, var(--gold) 28px,
+        transparent 28px, transparent 32px
+      );
+      opacity: 0.5;
+    }
+
+    /* ─── RSVP ─── */
+    .rsvp-section {
+      background: linear-gradient(160deg, var(--blue-deep) 0%, #163354 100%);
+      text-align: center;
+    }
+    .rsvp-section .section-label { color: var(--gold-light); }
+    .rsvp-section .section-title { color: var(--white); }
+    .rsvp-lead {
+      font-size: 1.2rem;
+      color: var(--blue-pale);
+      margin: 1rem auto 2.5rem;
+      max-width: 520px;
+      line-height: 1.7;
+      font-style: italic;
+    }
+    .rsvp-steps {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+      margin-bottom: 2.5rem;
+    }
+    .rsvp-step {
+      background: rgba(255,255,255,0.07);
+      border: 1px solid rgba(255,255,255,0.15);
+      padding: 1.5rem;
+      max-width: 200px;
+      text-align: center;
+    }
+    .rsvp-step-num {
+      font-family: 'Cinzel', serif;
+      font-size: 2rem;
+      color: var(--gold);
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+    .rsvp-step p {
+      font-size: 0.95rem;
+      color: var(--blue-pale);
+      line-height: 1.5;
+    }
+    .rsvp-btn {
+      display: inline-block;
+      padding: 1.1rem 3.5rem;
+      background: var(--gold);
+      color: var(--blue-deep);
+      text-decoration: none;
+      font-family: 'Cinzel', serif;
+      font-size: 0.75rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      font-weight: 600;
+      transition: all 0.3s;
+      margin-bottom: 1.5rem;
+    }
+    .rsvp-btn:hover {
+      background: var(--gold-light);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 30px rgba(201,168,76,0.3);
+    }
+    .rsvp-deadline {
+      font-size: 0.9rem;
+      color: var(--blue-pale);
+      opacity: 0.7;
+    }
+
+    /* ─── FOOTER ─── */
+    footer {
+      background: var(--blue-deep);
+      color: var(--blue-pale);
+      text-align: center;
+      padding: 3rem 2rem;
+      border-top: 3px solid var(--gold);
+    }
+    footer .footer-names {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: 2rem;
+      color: var(--white);
+      margin-bottom: 0.5rem;
+    }
+    footer p {
+      font-size: 0.85rem;
+      opacity: 0.6;
+      letter-spacing: 0.1em;
+    }
+    .footer-meander {
+      font-size: 1.5rem;
+      color: var(--gold);
+      opacity: 0.4;
+      letter-spacing: 0.3em;
+      margin: 1rem 0;
+    }
+
+    /* ─── ANIMATIONS ─── */
+    .reveal {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (max-width: 600px) {
+      nav { gap: 1.2rem; flex-wrap: wrap; }
+      nav a { font-size: 0.55rem; }
+      .countdown-sep { display: none; }
+      .column-left, .column-right { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- HERO -->
+<section class="hero" id="inicio">
+  <div class="column-left">
+    <div class="col-cap"></div>
+    <div class="col-segment"></div>
+    <div class="col-base"></div>
+  </div>
+  <div class="column-right">
+    <div class="col-cap"></div>
+    <div class="col-segment"></div>
+    <div class="col-base"></div>
+  </div>
+
+  <div class="hero-content">
+    <p class="hero-eyebrow">Os invitamos a celebrar nuestra boda</p>
+    <h1 class="hero-names">
+      Jose
+      <span>&amp;</span>
+      Cristina
+    </h1>
+    <div class="greek-divider"><span class="meander">⌘</span></div>
+    <p class="hero-date">13 · 03 · 2027</p>
+    <p class="hero-location">Jardines de la Cartuja · El Puig, Valencia</p>
+    <div class="hero-scroll">
+      <a href="file:///C:/Users/User/Downloads/index.html#cuenta-atras" class="scroll-btn">Descubrir</a>
+    </div>
+  </div>
+</section>
+
+<!-- NAV -->
+<nav>
+  <a href="file:///C:/Users/User/Downloads/index.html#cuenta-atras">Cuenta atrás</a>
+  <a href="file:///C:/Users/User/Downloads/index.html#detalles">El día</a>
+  <a href="file:///C:/Users/User/Downloads/index.html#lugar">Lugar</a>
+  <a href="file:///C:/Users/User/Downloads/index.html#dresscode">Dresscode</a>
+  <a href="file:///C:/Users/User/Downloads/index.html#rsvp">Confirmar asistencia</a>
+</nav>
+
+<!-- COUNTDOWN -->
+<div class="countdown-section" id="cuenta-atras">
+  <p class="section-label">Faltan</p>
+  <h2 class="section-title">Días para el gran día</h2>
+  <div class="countdown-grid">
+    <div class="countdown-item">
+      <span class="countdown-number" id="dias">352</span>
+      <span class="countdown-label">Días</span>
+    </div>
+    <span class="countdown-sep">·</span>
+    <div class="countdown-item">
+      <span class="countdown-number" id="horas">20</span>
+      <span class="countdown-label">Horas</span>
+    </div>
+    <span class="countdown-sep">·</span>
+    <div class="countdown-item">
+      <span class="countdown-number" id="minutos">25</span>
+      <span class="countdown-label">Minutos</span>
+    </div>
+    <span class="countdown-sep">·</span>
+    <div class="countdown-item">
+      <span class="countdown-number" id="segundos">20</span>
+      <span class="countdown-label">Segundos</span>
+    </div>
+  </div>
+</div>
+
+<!-- NUESTRA HISTORIA -->
+<section class="story-section reveal visible" id="historia">
+  <div class="section-inner">
+    <div class="section-header">
+      <p class="section-label" style="color:var(--blue-mid)">Nosotros</p>
+      <h2 class="section-title">Nuestra historia</h2>
+      <div class="greek-divider"><span class="meander" style="color:var(--gold)">◈</span></div>
+    </div>
+    <p class="story-text">
+      Después de compartir tantos momentos juntos, hemos decidido dar el paso más importante de nuestras vidas. El 13 de marzo de 2027, rodeados de las personas que más queremos, diremos "sí quiero" en los preciosos Jardines de la Cartuja de El Puig. Queremos que seas parte de este día tan especial para nosotros.
+    </p>
+  </div>
+</section>
+
+<!-- DETALLES -->
+<section class="details-section reveal visible" id="detalles">
+  <div class="section-inner">
+    <div class="section-header">
+      <p class="section-label" style="color:var(--blue-mid)">Programa</p>
+      <h2 class="section-title">El día de la boda</h2>
+      <div class="greek-divider"><span class="meander" style="color:var(--gold)">◈</span></div>
+    </div>
+    <div class="details-grid">
+      <div class="detail-card">
+        <span class="detail-icon">🕐</span>
+        <h3>Ceremonia</h3>
+        <p><strong>12:30 h</strong>Bienvenida y ceremonia nupcial en los Jardines de la Cartuja</p>
+      </div>
+      <div class="detail-card">
+        <span class="detail-icon">🥂</span>
+        <h3>Cocktail</h3>
+        <p><strong>13:30 h</strong>Aperitivo y cóctel de bienvenida en los jardines exteriores</p>
+      </div>
+      <div class="detail-card">
+        <span class="detail-icon">🍽️</span>
+        <h3>Banquete</h3>
+        <p><strong>15:00 h</strong>Celebración, comida y los brindis más especiales</p>
+      </div>
+      <div class="detail-card">
+        <span class="detail-icon">🎶</span>
+        <h3>Fiesta</h3>
+        <p><strong>18:00 - 22:00 h</strong>Baile, música y la noche que no querrás que termine</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MAPA / LUGAR -->
+<section class="map-section reveal visible" id="lugar">
+  <div class="section-inner">
+    <div class="section-header">
+      <p class="section-label" style="color:var(--blue-mid)">Cómo llegar</p>
+      <h2 class="section-title">El lugar</h2>
+      <div class="greek-divider"><span class="meander" style="color:var(--gold)">◈</span></div>
+      <p style="color:var(--text-mid); font-size:1.1rem; font-style:italic; margin-top:1rem;">
+        Jardines de la Cartuja · El Puig, Valencia
+      </p>
+    </div>
+    <div class="map-wrapper">
+      <iframe src="./Jose &amp; Cristina · 13.03.2027_files/embed.html" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Jardines de la Cartuja, El Puig" width="600" height="450" style="border:0;">
+      </iframe>
+      <div class="map-info">
+        <p>📍 Jardines de la Cartuja, El Puig, Valencia</p>
+        <a href="https://www.google.com/maps/place/Jardines+la+Cartuja/@39.5932943,-0.3211721,17z/data=!3m1!4b1!4m6!3m5!1s0xd6040ebb9edfa83:0xd74376631f3d9db3!8m2!3d39.5932943!4d-0.3211721!16s%2Fg%2F1tdp1t8k?entry=ttu&amp;g_ep=EgoyMDI2MDMyMi4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener">Cómo llegar →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DRESSCODE -->
+<section class="dresscode-section reveal visible" id="dresscode">
+  <div class="section-inner">
+    <div class="section-header">
+      <p class="section-label" style="color:var(--blue-mid)">Vestuario</p>
+      <h2 class="section-title">Dresscode</h2>
+      <div class="greek-divider"><span class="meander" style="color:var(--gold)">◈</span></div>
+    </div>
+    <div class="dresscode-content">
+      <div class="dresscode-text">
+        <h3>Elegante</h3>
+        <p>
+          Os pedimos que vengáis de gala y cómodos.<br>
+          Os agradecemos evitar el blanco y tonos muy claros , reservado para la novia y la pequeña Sofía.
+        </p>
+        <div class="color-palette">
+          <div class="swatch" style="background:#2c6fad;" title="Azul mediterráneo"></div>
+          <div class="swatch" style="background:#5b9bd5;" title="Azul celeste"></div>
+          <div class="swatch" style="background:#d6e9f8;" title="Azul pálido"></div>
+          <div class="swatch" style="background:#F8AD9D;" title="Coral pastel"></div>
+          <div class="swatch" style="background:#D08159;" title="Naranja tostado"></div>
+        </div>
+        <p style="font-size:0.9rem; opacity:0.7; font-style:italic;">Paleta de colores de inspiración</p>
+      </div>
+      <div class="dresscode-visual">
+        <div class="greek-pattern" style="width:100%;"></div>
+        <div style="text-align:center; padding: 2rem; border: 1px solid rgba(44,111,173,0.2); background: white;">
+          <span style="font-size:3rem;">👗🤵</span>
+          <p style="font-family:&#39;Cinzel&#39;,serif; font-size:0.7rem; letter-spacing:0.2em; color:var(--blue-mid); text-transform:uppercase; margin-top:1rem;">Formal · Elegante</p>
+        </div>
+        <div class="greek-pattern" style="width:100%;"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RSVP -->
+<section class="rsvp-section reveal visible" id="rsvp">
+  <div class="section-inner">
+    <p class="section-label">Confirmación</p>
+    <h2 class="section-title">¿Venís a celebrarlo con nosotros?</h2>
+    <div class="greek-divider" style="margin:1.5rem 0;"><span class="meander" style="color:var(--gold)">◈</span></div>
+    <p class="rsvp-lead">
+      Por favor, confirmad vuestra asistencia antes del <strong style="color:var(--gold-light)">31 de enero de 2027</strong>. Nos ayudará mucho para la organización del gran día.
+    </p>
+
+    <div class="rsvp-steps">
+      <div class="rsvp-step">
+        <span class="rsvp-step-num">1</span>
+        <p>Haz clic en el botón de abajo</p>
+      </div>
+      <div class="rsvp-step">
+        <span class="rsvp-step-num">2</span>
+        <p>Rellena el formulario con tus datos</p>
+      </div>
+      <div class="rsvp-step">
+        <span class="rsvp-step-num">3</span>
+        <p>¡Listo! Te esperamos el 13 de marzo</p>
+      </div>
+    </div>
+
+    <a href="https://forms.gle/Qc2yMSFditA8d23m6" class="rsvp-btn" target="_blank" rel="noopener">
+      ✦ Confirmar asistencia ✦
+    </a>
+
+    <p class="rsvp-deadline">Fecha límite: 31 de enero de 2027</p>
+
+    <div style="margin-top: 2.5rem; padding: 1.5rem; border: 1px solid rgba(255,255,255,0.15); max-width: 500px; margin-left: auto; margin-right: auto;">
+      <p style="color: var(--blue-pale); font-size: 0.9rem; line-height: 1.7;">
+        📧 ¿Tienes alguna pregunta? Escríbenos a<br>
+        <a href="mailto:cristina.as93@gmail.com" style="color: var(--gold-light);">cristina.as93@gmail.com</a>
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p class="footer-names">Jose &amp; Cristina</p>
+  <p class="footer-meander">· · ◈ · ·</p>
+  <p>13 · 03 · 2027 · Jardines de la Cartuja · El Puig, Valencia</p>
+  <p style="margin-top: 0.5rem;">Con todo nuestro amor ♡</p>
+</footer>
+
+<script>
+  // ─── COUNTDOWN ───
+  function updateCountdown() {
+    const wedding = new Date('2027-03-13T12:00:00');
+    const now = new Date();
+    const diff = wedding - now;
+
+    if (diff <= 0) {
+      document.getElementById('dias').textContent = '0';
+      document.getElementById('horas').textContent = '00';
+      document.getElementById('minutos').textContent = '00';
+      document.getElementById('segundos').textContent = '00';
+      return;
+    }
+
+    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+    document.getElementById('dias').textContent = days;
+    document.getElementById('horas').textContent = String(hours).padStart(2, '0');
+    document.getElementById('minutos').textContent = String(minutes).padStart(2, '0');
+    document.getElementById('segundos').textContent = String(seconds).padStart(2, '0');
+  }
+
+  updateCountdown();
+  setInterval(updateCountdown, 1000);
+
+  // ─── SCROLL REVEAL ───
+  const revealEls = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+
+  revealEls.forEach(el => observer.observe(el));
+</script>
+
+
+
+</body></html>
